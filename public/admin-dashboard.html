@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="adminstyle.css" />
+  </head>
+  <body class="dashboard-body">
+    <header class="topbar">
+      <h1>Welcome Admin...!</h1>
+      <div class="top-buttons">
+        <button class="logout-btn" onclick="fetchAllUsers()">👥 View Users</button>
+        <button class="logout-btn" onclick="fetchBlogs()">📝 View All Blogs</button>
+        <button class="logout-btn" onclick="logout()">🚪 Logout</button>
+      </div>
+    </header>
+
+    <main class="dashboard-main">
+      <!-- info -->
+      <section class="stats">
+        <div class="card">
+          <h3>Total Users</h3>
+          <p id="totalUsers">0</p>
+        </div>
+        <div class="card">
+          <h3>Total Blogs</h3>
+          <p id="totalBlogs">0</p>
+        </div>
+        <div class="card">
+          <h3>Admins</h3>
+          <p id="totalAdmins">0</p>
+        </div>
+      </section>
+
+      <!--take all Users  -->
+      <section class="user-list">
+        <h2>All Registered Users</h2>
+        <div id="usersContainer" class="data-container">
+          <p>No users loaded yet...</p>
+        </div>
+      </section>
+
+      <!-- Blogs Section -->
+      <section class="blog-list">
+        <h2>All Blogs</h2>
+        <div id="adminBlogsContainer" class="data-container">
+          <p>No blogs loaded yet...</p>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="adminscript.js"></script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashstyle.css" />
+  </head>
+  <body class="dashboard-body">
+    <header class="topbar">
+      <h1>Welcome, <span id="usernameDisplay"></span> 👋</h1>
+      <button class="logout-btn" onclick="logout()">🚪 Logout</button>
+      <button class="logout-btn" onclick="fetchBlogs()">show all blogs</button>
+    </header>
+
+    <main class="dashboard-main">
+      <!-- Stats Cards -->
+      <section class="stats">
+        <div class="card">
+          <h3>Total Blogs</h3>
+          <p id="totalBlogs">0</p>
+        </div>
+      </section>
+
+      <!-- Add Blog Section -->
+      <section class="add-blog">
+        <h2>Add New Blog</h2>
+        <form id="blogForm">
+          <input
+            type="text"
+            id="blogTitle"
+            placeholder="Enter blog title"
+            required
+          />
+          <p id="blogMessage"></p>
+          <textarea
+            id="blogContent"
+            placeholder="Write your blog..."
+            required
+          ></textarea>
+          <button type="submit">Add Blog</button>
+        </form>
+      </section>
+
+      <!-- Blog List Section -->
+      <section class="blog-list">
+        <h2>My Blogs</h2>
+        <div id="blogsContainer"></div>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
